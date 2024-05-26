@@ -51,9 +51,9 @@ All API requests must include an app secret token in the headers as CL-X-TOKEN.
   ```json
   { "data": "value" }
 
-  ## Running Tests
-  ```bash
-  python manage.py test data_pusher_app --verbosity=3
+## Running Tests
+```bash
+python manage.py test data_pusher_app --verbosity=3
 
 
 
