@@ -36,7 +36,8 @@ Data Pusher is a Django web application designed to efficiently handle JSON data
 
 ## API Documentation
 **Authentication**
-All API requests must include an app secret token in the headers as CL-X-TOKEN.
+- All endpoints are accessed from the base URL http://localhost:8000/.
+- All API requests must include an app secret token in the headers as CL-X-TOKEN.
 
 **Endpoints**
 - **Accounts**
