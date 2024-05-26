@@ -21,3 +21,37 @@ Data Pusher is a Django web application designed to efficiently handle JSON data
    ```bash
    git clone https://github.com/<your-username>/data-pusher.git
    cd data-pusher
+
+2. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+
+3. Initialize the database:
+   ```bash
+   python manage.py migrate
+
+4. Run the server:
+   ```bash
+   python manage.py runserver
+
+## API Documentation
+**Authentication**
+All API requests must include an app secret token in the headers as CL-X-TOKEN.
+
+**Endpoints**
+- **Accounts**
+  ```json
+  { "email_id": "user@example.com", "account_name": "User's Account" }
+
+- **Destinations**
+  ```json
+  { "account": "uuid-of-account", "url": "https://api.example.com/webhook", "http_method": "POST", "headers": "{\"Content-Type\": \"application/json\"}" }
+
+- **Data Handling**
+  ```json
+  { "data": "value" }
+
+
+
+
+
