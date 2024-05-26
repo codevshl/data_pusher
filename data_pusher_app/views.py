@@ -3,7 +3,7 @@ from .models import Account, Destination
 from .serializers import AccountSerializer, DestinationSerializer
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
-from django.views.decorators.http import require_POST
+from django.views.decorators.http import require_POST, require_http_methods
 import requests
 import json
 
@@ -55,3 +55,17 @@ def incoming_data(request):
             responses.append({'url': destination.url, 'error': str(e)})
 
     return JsonResponse({'responses': responses})
+
+
+@csrf_exempt
+@require_http_methods(["GET"])
+
+def get_destinations(request, account_id):
+    try:
+        account = Account.objects.get(pk=account_id)
+    except Account.DoesNotExist:
+        return JsonResponse({'error': 'Account not found'}, status=404)
+
+    destinations = Destination.objects.filter(account=account)
+    serializer = DestinationSerializer(destinations, many=True)
+    return JsonResponse(serializer.data, safe=False)    

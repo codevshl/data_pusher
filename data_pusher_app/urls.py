@@ -1,6 +1,6 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .views import AccountViewSet, DestinationViewSet, incoming_data
+from .views import AccountViewSet, DestinationViewSet, incoming_data, get_destinations
 from django.views.generic.base import RedirectView
 
 router = DefaultRouter()
@@ -16,5 +16,5 @@ urlpatterns = [
     path('', include(router.urls)),  # This automatically includes 'accounts/' and 'destinations/' from the router
     path('server/incoming_data', incoming_data, name='incoming_data'),
     #path('server/incoming_data/', RedirectView.as_view(url='/where-to-redirect/', permanent=False), name='test-redirect'),
+    path('accounts/<uuid:account_id>/destinations', get_destinations, name='get_destinations'),
 ]
-
