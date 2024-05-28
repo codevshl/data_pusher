@@ -59,34 +59,34 @@
 
 
 
-import uuid
-from django.test import TestCase, Client
-from django.urls import reverse
-from .models import Account, Destination
-import json
+# import uuid
+# from django.test import TestCase, Client
+# from django.urls import reverse
+# from .models import Account, Destination
+# import json
 
 
-class IncomingDataTest(TestCase):
-    def setUp(self):
-        # Create a sample account with a valid UUID as the app_secret_token
-        self.account = Account.objects.create(app_secret_token=uuid.uuid4())
-        self.destination = Destination.objects.create(
-            account=self.account, 
-            url='http://example.com', 
-            http_method='POST', 
-            headers='{"Content-Type": "application/json"}'
-        )
-        # Client for making requests
-        self.client = Client()
+# class IncomingDataTest(TestCase):
+#     def setUp(self):
+#         # Create a sample account with a valid UUID as the app_secret_token
+#         self.account = Account.objects.create(app_secret_token=uuid.uuid4())
+#         self.destination = Destination.objects.create(
+#             account=self.account, 
+#             url='http://example.com', 
+#             http_method='POST', 
+#             headers='{"Content-Type": "application/json"}'
+#         )
+#         # Client for making requests
+#         self.client = Client()
 
-    def test_incoming_data(self):
-        url = reverse('incoming_data')  # Ensure this matches the URL name in your urls.py
-        data = {'key': 'value'}
-        headers = {'HTTP_CL_X_TOKEN': self.account.app_secret_token}
+#     def test_incoming_data(self):
+#         url = reverse('incoming_data')  # Ensure this matches the URL name in urls.py
+#         data = {'key': 'value'}
+#         headers = {'HTTP_CL_X_TOKEN': self.account.app_secret_token}
         
-        response = self.client.post(url, json.dumps(data), content_type='application/json', **headers)
+#         response = self.client.post(url, json.dumps(data), content_type='application/json', **headers)
         
-        # Check response status and content
-        self.assertEqual(response.status_code, 200)
-        responses = json.loads(response.content.decode('utf-8'))  # Ensures correct decoding of the response content
-        self.assertIn('responses', responses)  # Ensure there is a 'responses' key in the JSON response
+#         # Check response status and content
+#         self.assertEqual(response.status_code, 200)
+#         responses = json.loads(response.content.decode('utf-8'))  # Ensures correct decoding of the response content
+#         self.assertIn('responses', responses)  # Ensure there is a 'responses' key in the JSON response

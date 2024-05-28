@@ -15,7 +15,6 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-print(f"print output: {BASE_DIR}")
 
 
 # Quick-start development settings - unsuitable for production
@@ -87,25 +86,25 @@ DATABASES = {
 }
 
 
-REST_FRAMEWORK = {
-    'DEFAULT_RENDERER_CLASSES': [
-        'rest_framework.renderers.BrowsableAPIRenderer',
-        'rest_framework.renderers.JSONRenderer',
-    ],
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.SessionAuthentication',
-        'rest_framework.authentication.BasicAuthentication'
-    ],
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated',
-    ]
-}
-
 # REST_FRAMEWORK = {
+#     'DEFAULT_RENDERER_CLASSES': [
+#         'rest_framework.renderers.BrowsableAPIRenderer',
+#         'rest_framework.renderers.JSONRenderer',
+#     ],
+#     'DEFAULT_AUTHENTICATION_CLASSES': [
+#         'rest_framework.authentication.SessionAuthentication',
+#         'rest_framework.authentication.BasicAuthentication'
+#     ],
 #     'DEFAULT_PERMISSION_CLASSES': [
-#         'rest_framework.permissions.AllowAny',  # This allows access without authentication
+#         'rest_framework.permissions.IsAuthenticated',
 #     ]
 # }
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',  # This allows access without authentication
+    ]
+}
 
 
 

@@ -30,3 +30,5 @@ urlpatterns = [
     path('', home, name='home'),
     # path('where-to-redirect/', test_response, name='test-response'),
 ]
+
+
