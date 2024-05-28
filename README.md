@@ -64,15 +64,15 @@ API Endpoints:
 
 - **Accounts**:
   - `POST /api/accounts/`: Create a new account.                [Images/POST_Accounts](Images/POST_Accounts.png)
-  - `GET /api/accounts/<id>/`: Retrieve a specific account.     [Images/GET_Accounts](Images/GET_Accounts.png)
-  - `PUT /api/accounts/<id>/`: Update a specific account.       [Images/PUT_Accounts](Images/PUT_Accounts.png)
-  - `DELETE /api/accounts/<id>/`: Delete a specific account.    [Images/DELETE_Accounts](Images/DELETE_Accounts.png)
+  - `GET /api/accounts/<account_id>/`: Retrieve a specific account.     [Images/GET_Accounts](Images/GET_Accounts.png)
+  - `PUT /api/accounts/<account_id>/`: Update a specific account.       [Images/PUT_Accounts](Images/PUT_Accounts.png)
+  - `DELETE /api/accounts/<account_id>/`: Delete a specific account.    [Images/DELETE_Accounts](Images/DELETE_Accounts.png)
 
 - **Destinations**:
   - `POST /api//destinations/`: Create a new destination.             [Images/POST_Destinations](Images/POST_Destinations.png)
-  - `GET /api/destinations/<id>/`: Retrieve a specific destination.   [Images/GET_Destinations](Images/GET_Destinations.png)
-  - `PUT /destinations/<id>/`: Update a specific destination.         [Images/PUT_Accounts](Images/PUT_Accounts.png)
-  - `DELETE /destinations/<id>/`: Delete a specific destination.      [Images/DELETE_Destinations](Images/DELETE_Destinations.png)
+  - `GET /api/destinations/<destinations_id>/`: Retrieve a specific destination.   [Images/GET_Destinations](Images/GET_Destinations.png)
+  - `PUT /destinations/<destinations_id>/`: Update a specific destination.         [Images/PUT_Accounts](Images/PUT_Accounts.png)
+  - `DELETE /destinations/<destinations_id>/`: Delete a specific destination.      [Images/DELETE_Destinations](Images/DELETE_Destinations.png)
   - `GET /api/acccounts/<account_id>/destinations/`: Retrieve all destinations for specific account.   [Images/GET_Accounts_Destinations](Images/GET_Accounts_Destinations.png)
 
 - **Incoming Data**:
