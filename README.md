@@ -63,7 +63,7 @@ Data Pusher is a Django web application designed to efficiently handle JSON data
 API Endpoints:
 
 - **Accounts**:
-  - `POST /api/accounts/`: Create a new account.                [Images/PUT_Accounts](Images/PUT_Accounts.png)
+  - `POST /api/accounts/`: Create a new account.                [Images/POST_Accounts](Images/POST_Accounts.png)
   - `GET /api/accounts/<id>/`: Retrieve a specific account.     [Images/GET_Accounts](Images/GET_Accounts.png)
   - `PUT /api/accounts/<id>/`: Update a specific account.       [Images/PUT_Accounts](Images/PUT_Accounts.png)
   - `DELETE /api/accounts/<id>/`: Delete a specific account.    [Images/DELETE_Accounts](Images/DELETE_Accounts.png)
