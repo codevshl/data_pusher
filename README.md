@@ -2,6 +2,15 @@
 
 # Data Pusher
 
+## Table of Contents
+- [Overview](#overview)
+- [Features](#features)
+- [Process](#process)
+- [Installation](#installation)
+- [API Endpoints](#api-endpoints)
+- [Running Tests](#running-tests)
+
+  
 ## Overview
 Data Pusher is a Django web application designed to efficiently handle JSON data received on a server, authenticate it using an app secret token, and distribute this data across various platforms using defined webhook URLs associated with each account.
 
@@ -60,7 +69,7 @@ Data Pusher is a Django web application designed to efficiently handle JSON data
    python manage.py runserver
    ```
 
-API Endpoints:
+## API Endpoints:
 
 - **Accounts**:
   - `POST /api/accounts/`: Create a new account.                [Images/POST_Accounts](Images/POST_Accounts.png)
